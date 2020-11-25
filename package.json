@@ -19,6 +19,7 @@
   "homepage": "https://github.com/CKalama/React-Portfolio#readme",
   "dependencies": {
     "concurrency": "^0.1.4",
+    "concurrently": "^5.3.0",
     "express": "^4.17.1",
     "if-env": "^1.0.4"
   }
