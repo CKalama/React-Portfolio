@@ -5,14 +5,14 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 
-//import {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   root: {
       flexGrow: 1
   },
   menuButton: {
-      marginRight: theme.spacing(2)
+      textAlign: "center"
   },
   title: {
       flexGrow: 1
@@ -24,23 +24,32 @@ export default function NavBar() {
 
   return (
       <div className={classes.root}>
-      <AppBar style={{ backgroundColor: "blue", padding:"20px" }} position="static">
+      <AppBar style={{ backgroundColor: "green", padding:"20px" }} position="static">
           <Toolbar>
+            
           <Typography style={{textAlign:"left"}}variant="h6" className={classes.title}>
               My React Portfolio
           </Typography>
-    
-          <Button
 
-            //   onClick={e => e.preventDefault()}
-              //href={}
-              color="inherit"
-          >
+          <Link to="/">
+              <Button color="inherit" style={{textAlign:"right"}}>
+                  Home
+              </Button>
+          </Link>
+            
+            <Link to="/About">
+          <Button color="inherit" style={{textAlign:"right"}}>
               About
           </Button>
-          
-          <Button color="inherit">Experience</Button>
-          <Button color="inherit">Contact</Button>
+            </Link>
+
+            <Link to="/About">
+          <Button color="inherit" style={{textAlign:"right"}}>Experience</Button>
+            </Link>
+
+            <Link to="/About">
+          <Button color="inherit" style={{textAlign:"right"}}>Contact</Button>
+            </Link>
           </Toolbar>
       </AppBar>
       </div>
